@@ -23,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		11DEF468ADA3FF3A0398B286 /* Pods_MyAwesomeSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAwesomeSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4570C16F1DE073F7003B4169 /* MyAwesomeSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAwesomeSocial.entitlements; sourceTree = "<group>"; };
 		45C60AD81DDA287C0088CEF9 /* MyAwesomeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAwesomeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C60ADB1DDA287C0088CEF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C60ADD1DDA287C0088CEF9 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		45C60ADA1DDA287C0088CEF9 /* MyAwesomeSocial */ = {
 			isa = PBXGroup;
 			children = (
+				4570C16F1DE073F7003B4169 /* MyAwesomeSocial.entitlements */,
 				45C60AF41DDB87190088CEF9 /* Util */,
 				45C60AEF1DDA34DE0088CEF9 /* Model */,
 				45C60AF01DDA34E40088CEF9 /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5SR4A25VD2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -391,6 +398,7 @@
 			baseConfigurationReference = FCAC3333E8EFEFFC312FE25F /* Pods-MyAwesomeSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyAwesomeSocial/MyAwesomeSocial.entitlements;
 				DEVELOPMENT_TEAM = 5SR4A25VD2;
 				INFOPLIST_FILE = MyAwesomeSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -406,6 +414,7 @@
 			baseConfigurationReference = 9827AB87DB3EF201D4A4238E /* Pods-MyAwesomeSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyAwesomeSocial/MyAwesomeSocial.entitlements;
 				DEVELOPMENT_TEAM = 5SR4A25VD2;
 				INFOPLIST_FILE = MyAwesomeSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
