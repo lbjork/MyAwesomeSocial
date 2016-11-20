@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450482651DE1C67200185914 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450482641DE1C67200185914 /* FeedVC.swift */; };
 		45C60ADC1DDA287C0088CEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C60ADB1DDA287C0088CEF9 /* AppDelegate.swift */; };
 		45C60ADE1DDA287C0088CEF9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C60ADD1DDA287C0088CEF9 /* SignInVC.swift */; };
 		45C60AE11DDA287C0088CEF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C60ADF1DDA287C0088CEF9 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		11DEF468ADA3FF3A0398B286 /* Pods_MyAwesomeSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAwesomeSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		450482641DE1C67200185914 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		4570C16F1DE073F7003B4169 /* MyAwesomeSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAwesomeSocial.entitlements; sourceTree = "<group>"; };
 		45C60AD81DDA287C0088CEF9 /* MyAwesomeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAwesomeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C60ADB1DDA287C0088CEF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				45C60ADD1DDA287C0088CEF9 /* SignInVC.swift */,
+				450482641DE1C67200185914 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				45C60ADE1DDA287C0088CEF9 /* SignInVC.swift in Sources */,
 				45C60AF81DDB89810088CEF9 /* RoundBtn.swift in Sources */,
 				45C60ADC1DDA287C0088CEF9 /* AppDelegate.swift in Sources */,
+				450482651DE1C67200185914 /* FeedVC.swift in Sources */,
 				45C60AF31DDB7F630088CEF9 /* FancyView.swift in Sources */,
 				45C60AF61DDB872A0088CEF9 /* Constants.swift in Sources */,
 				45C60AFC1DDB8CCF0088CEF9 /* FancyBtn.swift in Sources */,

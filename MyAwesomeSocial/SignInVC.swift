@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -20,6 +21,14 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -53,6 +62,10 @@ class SignInVC: UIViewController {
             }
             else {
                 print("LARS: Successfully authenticated with Firebase")
+                if let user = user {
+                    self.completeSingIn(id: user.uid)
+                }
+
             }
         })
     }
@@ -64,17 +77,30 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("Email user authenticated with firebase")
+                    if let user = user {
+                        self.completeSingIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("LARS: Unable to authenticate with firebase using email")
                         } else {
                             print("Successfully authenticated with firebase")
+                            if let user = user {
+                                self.completeSingIn(id: user.uid)
+                            }
+
                         }
                     })
                 }
             })
         }
+    }
+
+    func completeSingIn(id: String) {
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("LARS: Data saved to Keychain: \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 }
 
