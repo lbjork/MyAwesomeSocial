@@ -10,6 +10,7 @@
 		450482651DE1C67200185914 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450482641DE1C67200185914 /* FeedVC.swift */; };
 		450482671DE20D4900185914 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450482661DE20D4900185914 /* CircleView.swift */; };
 		450482691DE2526000185914 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450482681DE2526000185914 /* PostCell.swift */; };
+		4518D7C21DE5EE84006C047D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518D7C11DE5EE84006C047D /* DataService.swift */; };
 		45C60ADC1DDA287C0088CEF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C60ADB1DDA287C0088CEF9 /* AppDelegate.swift */; };
 		45C60ADE1DDA287C0088CEF9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C60ADD1DDA287C0088CEF9 /* SignInVC.swift */; };
 		45C60AE11DDA287C0088CEF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C60ADF1DDA287C0088CEF9 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		450482641DE1C67200185914 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		450482661DE20D4900185914 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		450482681DE2526000185914 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		4518D7C11DE5EE84006C047D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4570C16F1DE073F7003B4169 /* MyAwesomeSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyAwesomeSocial.entitlements; sourceTree = "<group>"; };
 		45C60AD81DDA287C0088CEF9 /* MyAwesomeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAwesomeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C60ADB1DDA287C0088CEF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4518D7C01DE5EE60006C047D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4518D7C11DE5EE84006C047D /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		45C60ACF1DDA287C0088CEF9 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		45C60ADA1DDA287C0088CEF9 /* MyAwesomeSocial */ = {
 			isa = PBXGroup;
 			children = (
+				4518D7C01DE5EE60006C047D /* Services */,
 				4570C16F1DE073F7003B4169 /* MyAwesomeSocial.entitlements */,
 				45C60AF41DDB87190088CEF9 /* Util */,
 				45C60AEF1DDA34DE0088CEF9 /* Model */,
@@ -284,6 +295,7 @@
 				45C60ADE1DDA287C0088CEF9 /* SignInVC.swift in Sources */,
 				45C60AF81DDB89810088CEF9 /* RoundBtn.swift in Sources */,
 				45C60ADC1DDA287C0088CEF9 /* AppDelegate.swift in Sources */,
+				4518D7C21DE5EE84006C047D /* DataService.swift in Sources */,
 				450482651DE1C67200185914 /* FeedVC.swift in Sources */,
 				45C60AF31DDB7F630088CEF9 /* FancyView.swift in Sources */,
 				45C60AF61DDB872A0088CEF9 /* Constants.swift in Sources */,
