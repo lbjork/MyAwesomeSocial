@@ -179,13 +179,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0ih-1H-knd">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="lkr-ad-bed" customClass="CircleView" customModule="MyAwesomeSocial" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="lkr-ad-bed" customClass="CircleView" customModule="MyAwesomeSocial" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="8an-cG-gzs"/>
                                                     <constraint firstAttribute="width" constant="49" id="AHN-wu-GfX"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Lr9-Yd-dTT" appends="YES" id="9Hy-Wt-auC"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sNC-nY-sDn" customClass="FancyField" customModule="MyAwesomeSocial" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
@@ -341,6 +345,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="lkr-ad-bed" id="bhh-Tl-XcW"/>
                         <outlet property="tableView" destination="CMX-QI-QXi" id="Cmz-Tg-08M"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="gotoSignIn" id="odh-AU-c5j"/>
                     </connections>
@@ -349,6 +354,11 @@
                 <tapGestureRecognizer id="TTA-cF-JUt">
                     <connections>
                         <action selector="signOutTapped:" destination="X5e-oW-v8A" id="ekL-pa-aIH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Lr9-Yd-dTT">
+                    <connections>
+                        <action selector="addImageTapped:" destination="X5e-oW-v8A" id="Xp6-9m-GBl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

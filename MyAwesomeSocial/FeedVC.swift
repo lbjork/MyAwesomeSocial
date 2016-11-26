@@ -10,10 +10,13 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageAdd: CircleView!
+    
 
+    var imagePicker: UIImagePickerController!
     var posts = [Post]()
 
     override func viewDidLoad() {
@@ -37,6 +40,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.tableView.reloadData()
         })
 
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +68,21 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return PostCell()
         }
     }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageAdd.image = image
+        } else {
+            print("LARS: A valid image was not selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func addImageTapped(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+
 
     @IBAction func signOutTapped(_ sender: UIButton) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
