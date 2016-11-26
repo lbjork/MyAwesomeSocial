@@ -261,7 +261,7 @@
                                                                         </imageView>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tyo-KO-adw">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tyo-KO-adw">
                                                                     <rect key="frame" x="0.0" y="75" width="327" height="155"/>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZQv-PI-8aj">
@@ -276,23 +276,20 @@
                                                                 </textView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="ZQv-PI-8aj" firstAttribute="top" secondItem="tyo-KO-adw" secondAttribute="bottom" constant="8" id="6AJ-4d-57t"/>
-                                                                <constraint firstItem="tyo-KO-adw" firstAttribute="leading" secondItem="7f4-CT-8LR" secondAttribute="leading" id="AVd-8i-5dC"/>
-                                                                <constraint firstItem="tyo-KO-adw" firstAttribute="top" secondItem="80Q-pj-uFS" secondAttribute="bottom" constant="8" id="OZU-zJ-Efm"/>
-                                                                <constraint firstAttribute="trailing" secondItem="tyo-KO-adw" secondAttribute="trailing" id="aCU-pu-bYe"/>
+                                                                <constraint firstItem="tyo-KO-adw" firstAttribute="top" secondItem="80Q-pj-uFS" secondAttribute="bottom" constant="15" id="5Ue-BR-h5Y"/>
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kBR-tn-k9Y">
-                                                            <rect key="frame" x="248" y="311" width="86" height="24"/>
+                                                            <rect key="frame" x="249" y="311" width="85" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkY-qQ-pSr">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="36" height="24"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="35.5" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                                     <color key="textColor" red="0.84705882352941175" green="0.88627450980392153" blue="0.8901960784313725" alpha="0.52000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZN-s4-MF3">
-                                                                    <rect key="frame" x="41" y="0.0" width="45" height="24"/>
+                                                                    <rect key="frame" x="40.5" y="0.0" width="44.5" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                                     <color key="textColor" red="0.84705882349999995" green="0.8862745098" blue="0.89019607840000003" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
