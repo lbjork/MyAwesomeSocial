@@ -206,6 +206,9 @@
                                                     <constraint firstAttribute="height" constant="49" id="Ynu-P4-uj0"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnTapped:" destination="X5e-oW-v8A" eventType="touchUpInside" id="9UP-8l-M7g"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -285,13 +288,13 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkY-qQ-pSr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="35.5" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                    <color key="textColor" red="0.84705882352941175" green="0.88627450980392153" blue="0.8901960784313725" alpha="0.52000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZN-s4-MF3">
                                                                     <rect key="frame" x="40.5" y="0.0" width="44.5" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                                                    <color key="textColor" red="0.84705882349999995" green="0.8862745098" blue="0.89019607840000003" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -318,6 +321,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="ZQv-PI-8aj" id="C2s-Xz-5ff"/>
+                                            <outlet property="likeImg" destination="u8W-7j-anq" id="0Xy-9p-oRm"/>
                                             <outlet property="likesLabel" destination="QZN-s4-MF3" id="9wC-aQ-kSH"/>
                                             <outlet property="postImg" destination="tyo-KO-adw" id="ufZ-hm-B9f"/>
                                             <outlet property="profileImg" destination="Zdh-0O-pbK" id="jGc-TN-LDI"/>
@@ -342,6 +346,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="captionField" destination="sNC-nY-sDn" id="bOP-Hf-DqE"/>
                         <outlet property="imageAdd" destination="lkr-ad-bed" id="bhh-Tl-XcW"/>
                         <outlet property="tableView" destination="CMX-QI-QXi" id="Cmz-Tg-08M"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="gotoSignIn" id="odh-AU-c5j"/>
